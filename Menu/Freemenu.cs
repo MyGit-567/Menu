@@ -8,24 +8,29 @@ namespace Menu
     {
         public void Print()
         {
-            foreach (KeyValuePair<string, Iaction> dictionaryEntry in lala)
+            foreach (KeyValuePair<string, Iaction> secondDictionary in dict2)
             {
                 Console.WriteLine(secondDictionary.Key);
                 Console.WriteLine(secondDictionary.Value.Description());
             }
 
-            lala[Validate("1")].Action();
+            dict2[Validate("first")].Action();
         }
-        Dictionary<int, Iaction> lala;
+        Dictionary<string, Iaction> dict2;
 
         public Freemenu(Dictionary<string, Iaction> lala)
         {
-            this.lala = lala;
+            this.dict2 = dict2;
         }
 
-        private int Validate(string input)
+        private string Validate(string input)
         {
-            return 1;
+            if(dict2.ContainsKey(input))
+                return input;
+            else
+            {
+                return Validate(Console.ReadLine());
+            }
         }
     }
 }

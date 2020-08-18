@@ -9,24 +9,39 @@ namespace Menu
     {
         public void Print()
         {
-            foreach(KeyValuePair<int,Iaction> dictionaryEntry in bla)
+            foreach(KeyValuePair<int,Iaction> dictionaryEntry in dict1)
             {
                 Console.WriteLine(dictionaryEntry.Key);
                 Console.WriteLine(dictionaryEntry.Value.Description());
             }
 
-            bla[Validate("1")].Action();
+            dict1[Validate("1")].Action();
         }
-        Dictionary<int, Iaction> bla;
+        Dictionary<int, Iaction> dict1;
 
-        public Numericalmenu(Dictionary<int, Iaction> bla)
+        public Numericalmenu(Dictionary<int, Iaction> dict1)
         {
-            this.bla = bla;
+            this.dict1 = dict1;
         }
 
         private int Validate(string input)
         {
-            return 1;
+                int number;
+            while (!Int32.TryParse(input, out number))
+            {
+                bool success = Int32.TryParse(input, out number);
+                if (success)
+                {
+                    Console.WriteLine("Converted '{0}' to {1}.", input, number);
+                }
+                else
+                {
+                    Console.WriteLine("Enter your input again: ");
+                }
+                dict1.ContainsKey(number);
+            }
+                return 1;
+            
         }
     }
 }
