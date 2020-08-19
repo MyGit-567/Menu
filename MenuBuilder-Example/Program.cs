@@ -8,28 +8,28 @@ namespace MenuBuilder_Example
     {
         static void Main(string[] args)
         {
-            Iaction addoption1 = new Addoption();
-            Iaction becktomenu2 = new Becktomenu();
-            var thirdDictionary = new Dictionary<int, Iaction>
+            Iaction addaption = new Addoption();
+            Iaction becktomenu = new Becktomenu();
+
+            var actionDictionary = new Dictionary<int, Iaction>
             {
-                {3 , addoption1 },
-                {4, becktomenu2 }
+                {1 , addaption },
+                {2, becktomenu }
             };
 
-            var moreDictionary = new Dictionary<string, Iaction>
-            {
-                {"five", becktomenu2 },
-                {"six", addoption1 }
 
+            var secondDictionary = new Dictionary<string, Iaction>
+            {
+                {"2",  becktomenu },
+                {"first", addaption }
             };
 
-            var numericMenu1 = new Numericalmenu(thirdDictionary);
-            var freemenunu1 = new Freemenu(moreDictionary);
-            numericMenu1.Print();
-            freemenunu1.Print();
+            var numericMenu = new Numericalmenu(actionDictionary);
 
+            var freemenu = new Freemenu(secondDictionary);
+            numericMenu.Print();
+            freemenu.Print();
         }
-
     }
 }
 
