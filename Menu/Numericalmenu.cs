@@ -5,8 +5,10 @@ using System.Text;
 
 namespace Menu
 {
-    class Numericalmenu : IPrint
+    public class Numericalmenu : IPrint
     {
+        Dictionary<int, Iaction> dict1;
+
         public void Print()
         {
             foreach(KeyValuePair<int,Iaction> dictionaryEntry in dict1)
@@ -15,10 +17,8 @@ namespace Menu
                 Console.WriteLine(dictionaryEntry.Value.Description());
             }
 
-            dict1[Validate("1")].Action();
+            dict1[Validate(Console.ReadLine())].Action();
         }
-        Dictionary<int, Iaction> dict1;
-
         public Numericalmenu(Dictionary<int, Iaction> dict1)
         {
             this.dict1 = dict1;
@@ -26,8 +26,9 @@ namespace Menu
 
         private int Validate(string input)
         {
-                int number;
-            while (!Int32.TryParse(input, out number))
+            int number;
+            
+            while (!Int32.TryParse(input, out number) || !dict1.ContainsKey(number))
             {
                 bool success = Int32.TryParse(input, out number);
                 if (success)
@@ -37,10 +38,11 @@ namespace Menu
                 else
                 {
                     Console.WriteLine("Enter your input again: ");
+                    input = Console.ReadLine();
                 }
-                dict1.ContainsKey(number);
             }
-                return 1;
+
+            return number;
             
         }
     }

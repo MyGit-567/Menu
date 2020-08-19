@@ -4,9 +4,8 @@ using System.Text;
 
 namespace Menu
 {
-    interface IPrint 
+    public interface IPrint 
     {
-        
             public void Print();
         
     }

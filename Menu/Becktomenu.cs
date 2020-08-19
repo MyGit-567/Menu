@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Menu
 {
-    class Becktomenu : Iaction
+    public class Becktomenu : Iaction
     {
         public void Action()
         {

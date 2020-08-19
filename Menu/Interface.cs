@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Menu
 {
-    interface Iaction
+    public interface Iaction
     {
         string Description();
         void Action();

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Menu
 {
-    class Freemenu : IPrint
+    public class Freemenu : IPrint
     {
         public void Print()
         {
@@ -16,11 +16,12 @@ namespace Menu
 
             dict2[Validate("first")].Action();
         }
+
         Dictionary<string, Iaction> dict2;
 
         public Freemenu(Dictionary<string, Iaction> lala)
         {
-            this.dict2 = dict2;
+            this.dict2 = lala;
         }
 
         private string Validate(string input)

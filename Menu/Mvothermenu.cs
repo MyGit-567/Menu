@@ -4,16 +4,16 @@ using System.Text;
 
 namespace Menu
 {
-    class Mvothermenu : Iaction
+    public class Mvothermenu : Iaction
     {
         public void Action()
         {
-
+            Console.WriteLine("Other menu");
         }
 
         public string Description()
         {
-            throw new NotImplementedException();
+            return "print other menu to the screen";
         }
     }
 }

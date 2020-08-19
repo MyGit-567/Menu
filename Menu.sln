@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30225.117
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Menu", "Menu\Menu.csproj", "{301AD2D6-E247-486C-965D-88F99B432944}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Menu", "Menu\Menu.csproj", "{301AD2D6-E247-486C-965D-88F99B432944}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MenuBuilder-Example", "MenuBuilder-Example\MenuBuilder-Example.csproj", "{0B10BE23-E2CB-42B4-82F7-19C57C0C5C12}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{301AD2D6-E247-486C-965D-88F99B432944}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{301AD2D6-E247-486C-965D-88F99B432944}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{301AD2D6-E247-486C-965D-88F99B432944}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B10BE23-E2CB-42B4-82F7-19C57C0C5C12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B10BE23-E2CB-42B4-82F7-19C57C0C5C12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B10BE23-E2CB-42B4-82F7-19C57C0C5C12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B10BE23-E2CB-42B4-82F7-19C57C0C5C12}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
